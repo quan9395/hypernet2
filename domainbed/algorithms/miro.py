@@ -85,8 +85,8 @@ class MIRO(Algorithm):
         # )
         # self.classifier = nn.Linear(self.featurizer.n_outputs, num_classes)
         # self.network = nn.Sequential(self.featurizer, self.classifier)
-        self.network = PrimaryNetwork()
-        # self.network = torch.hub.load('pytorch/vision:v0.10.0', 'resnet18', pretrained=False)
+        # self.network = PrimaryNetwork()
+        self.network = torch.hub.load('pytorch/vision:v0.10.0', 'resnet18', pretrained=False)
         self.ld = hparams.ld
 
         # build mean/var encoders
